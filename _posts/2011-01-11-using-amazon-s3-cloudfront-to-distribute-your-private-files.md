@@ -1,5 +1,5 @@
 ---
-title: "Using Amazon S3 & Cloudfront To distribute your private files"
+title: "Using Amazon S3 and Cloudfront to distribute your private files"
 date: 2011-01-11
 layout: post
 ---
