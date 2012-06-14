@@ -45,16 +45,16 @@ namespace PMI.AWS.CloudFront
 {
     public class SignedURL
     {
-        /// <summary>
+        /// &lt;summary&gt;
         /// This Generates a signed http url using a canned policy.
         /// To create the PEM file and KeyPairID please visit https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
-        /// </summary>
-        /// <param name="resourceURL">The URL of the distribution item you are signing.</param>
-        /// <param name="expiryTime">UTC time to expire the signed URL</param>
-        /// <param name="pemFileLocation">The path and name to the PEM file. Can be either Relative or Absolute.</param>
-        /// <param name="keypairId">The ID of the private key used to sign the request</param>
-        /// <param name="urlEncode">Whether to URL encode the result</param>
-        /// <returns>A String that is the signed http request.</returns>
+        /// &lt;/summary&gt;
+        /// &lt;param name="resourceURL"&gt;The URL of the distribution item you are signing.&lt;/param&gt;
+        /// &lt;param name="expiryTime"&gt;UTC time to expire the signed URL&lt;/param&gt;
+        /// &lt;param name="pemFileLocation"&gt;The path and name to the PEM file. Can be either Relative or Absolute.&lt;/param&gt;
+        /// &lt;param name="keypairId"&gt;The ID of the private key used to sign the request&lt;/param&gt;
+        /// &lt;param name="urlEncode"&gt;Whether to URL encode the result&lt;/param&gt;
+        /// &lt;returns&gt;A String that is the signed http request.&lt;/returns&gt;
         public static string GetPreSignedURLWithPEMFile(string resourceURL, DateTime expiryTime, string pemFileLocation, string keypairId, bool urlEncode)
         {
             if (pemFileLocation.StartsWith("~"))
@@ -69,32 +69,32 @@ namespace PMI.AWS.CloudFront
             return GetPreSignedURLWithPEMKey(resourceURL, expiryTime, pemKey, keypairId, urlEncode);
         }
 
-        /// <summary>
+        /// &lt;summary&gt;
         /// This Generates a signed http url using a canned policy.
         /// To create the PEM file and KeyPairID please visit https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
-        /// </summary>
-        /// <param name="resourceURL">The URL of the distribution item you are signing.</param>
-        /// <param name="expiryTime">UTC time to expire the signed URL</param>
-        /// <param name="pemFileLocation">The actual pem file</param>
-        /// <param name="keypairId">The ID of the private key used to sign the request</param>
-        /// <param name="urlEncode">Whether to URL encode the result</param>
-        /// <returns>A String that is the signed http request.</returns>
+        /// &lt;/summary&gt;
+        /// &lt;param name="resourceURL"&gt;The URL of the distribution item you are signing.&lt;/param&gt;
+        /// &lt;param name="expiryTime"&gt;UTC time to expire the signed URL&lt;/param&gt;
+        /// &lt;param name="pemFileLocation"&gt;The actual pem file&lt;/param&gt;
+        /// &lt;param name="keypairId"&gt;The ID of the private key used to sign the request&lt;/param&gt;
+        /// &lt;param name="urlEncode"&gt;Whether to URL encode the result&lt;/param&gt;
+        /// &lt;returns&gt;A String that is the signed http request.&lt;/returns&gt;
         public static string GetPreSignedURLWithPEMKey(string resourceURL, DateTime expiryTime, string keyPEM, string keypairId, bool urlEncode)
         {
             string xmlKey = JavaScience.opensslkey.DecodePEMKey(keyPEM);
             return GetPreSignedURLWithXMLKey(resourceURL, expiryTime, xmlKey, keypairId, urlEncode);
         }
 
-        /// <summary>
+        /// &lt;summary&gt;
         /// This Generates a signed http url using a canned policy.
         /// To create the PEM file and KeyPairID please visit https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
-        /// </summary>
-        /// <param name="resourceURL">The URL of the distribution item you are signing.</param>
-        /// <param name="expiryTime">UTC time to expire the signed URL</param>
-        /// <param name="pemFileLocation">The actual pem file</param>
-        /// <param name="keypairId">The ID of the private key used to sign the request</param>
-        /// <param name="urlEncode">Whether to URL encode the result</param>
-        /// <returns>A String that is the signed http request.</returns>
+        /// &lt;/summary&gt;
+        /// &lt;param name="resourceURL"&gt;The URL of the distribution item you are signing.&lt;/param&gt;
+        /// &lt;param name="expiryTime"&gt;UTC time to expire the signed URL&lt;/param&gt;
+        /// &lt;param name="pemFileLocation"&gt;The actual pem file&lt;/param&gt;
+        /// &lt;param name="keypairId"&gt;The ID of the private key used to sign the request&lt;/param&gt;
+        /// &lt;param name="urlEncode"&gt;Whether to URL encode the result&lt;/param&gt;
+        /// &lt;returns&gt;A String that is the signed http request.&lt;/returns&gt;
         public static string GetPreSignedURLWithXMLKey(string resourceURL, DateTime expiryTime, string keyXML, string keypairId, bool urlEncode)
         {
             long expiry = (long)(expiryTime.ToUniversalTime() - new DateTime(1970, 1, 1)).TotalSeconds;
