@@ -1,5 +1,5 @@
 ---
-title: "Using Amazon S3 & Cloudfront To distribute your private files: Part 2 - Shared hosting"
+title: "Using Amazon S3 & Cloudfront To distribute your private files Part 2 - Shared hosting"
 date: 2011-01-25
 layout: post
 ---
