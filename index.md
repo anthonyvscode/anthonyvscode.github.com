@@ -6,7 +6,8 @@ title : anthonyvscode
 <ul id="archive">
     {% for post in site.posts %}
 		<li>
-			<a href="{{ post.url }}">{{ post.title }}</a><span><a href="{{ post.url }}#disqus_thread"></a></span>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="comment-count"><a href="{{ post.url }}#disqus_thread"></a></div>
 			<span class="date">{{ post.date | date: "%d %B, %Y" }}</span>
 		</li>
     {% endfor %}
