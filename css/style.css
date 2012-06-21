@@ -546,3 +546,45 @@ footer {
 	font-size:12px !important;
 }
 
+
+
+
+/* Comment Bubble */
+
+.comment-count {
+position: relative;
+float: right;
+width: 10px;
+height: 10px;
+margin: 50px 0 200px;
+text-align: center;
+font: 7px/10px Arial, sans-serif;
+color: 
+white;
+background: 
+#C91F2C;
+}
+
+.comment-count::before {
+content: "";
+position: absolute;
+bottom: -7px;
+right: 0;
+border-width: 0 0 7px 7px;
+border-style: solid;
+border-color: 
+transparent 
+#C91F2C;
+}
+
+.comment-count::after {
+content: "";
+position: absolute;
+bottom: -7px;
+right: 85px;
+border-width: 0 0 7px 55px;
+border-style: solid;
+border-color: 
+transparent 
+white;
+}
