@@ -4,13 +4,13 @@ title: "DoddleReport - Export type by parameter"
 layout: post
 ---
 
-[DoddleReport](http://doddlereport.codeplex.com/) is a fantastic library built by [Matt Hidinger](https://twitter.com/matthidinger) which is a very simple, install-and-go package to turn your datasets into exportable objects like CSV, PDF or Excel. It hasnt been updated for years, but it's still solid as a rock.
+[DoddleReport](http://doddlereport.codeplex.com/) is a fantastic library built by [Matt Hidinger](https://twitter.com/matthidinger) which is a very simple, install-and-go package to turn your datasets into exportable files like CSV, PDF or Excel. It hasn't been updated for years, but it's still solid as a rock.
 
-In using it through, there comes some limitations on exporting in MVC, as the built in routing style of {Action}.{Extension} causes issues within the app as the "." doesnt route properly.
+In using it though, there comes some limitations on exporting in MVC, as the built in routing style of {Action}.{Extension} causes issues within the app as the "." doesn't route properly.
 
 To overcome this, I created an export that taps into the underlying types by using an "extension" parameter instead.
 
-Just pass in xlsx, pdf etc, and it will call the underlying writer instead of using the built in doddle routing which was {action}.{extension}
+Just pass in xlsx, pdf etc, and it will call the underlying writer instead of using the built in doddle routing which is {action}.{extension}
 
 <strong>Example Usage</strong>
 
@@ -18,9 +18,9 @@ Just pass in xlsx, pdf etc, and it will call the underlying writer instead of us
 http://localhost:80/Area/Controller/Action?extension={extension}
 </pre>
 
-In order to return this, just use the custom ReportResult (below) to return your results.
+In order to return this, just use this custom ReportResult to return your results.
 
-<strong>ReportResult ActionResult</strong>
+<strong>ReportResult.cs</strong>
 
 <pre class="prettyprint">
 
