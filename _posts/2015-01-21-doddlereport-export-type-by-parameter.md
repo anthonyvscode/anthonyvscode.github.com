@@ -12,7 +12,7 @@ To overcome this, I created an export that taps into the underlying types by usi
 
 ### Usage
 <pre class="prettyprint">
-http://localhost:80/Area/Controller/Action/{1}?extension={extension}
+http://localhost:80/Area/Controller/Action?extension={extension}
 </pre>
 
 Just pass in xlsx, pdf etc, and it will call the underlying writer instead of using the built in doddle routing which was {action}.{extension}
