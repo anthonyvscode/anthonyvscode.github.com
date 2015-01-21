@@ -5,8 +5,6 @@ date: 2015-01-21
 layout: post
 ---
 
-## DoddleReport - Export type by parameter
-
 [DoddleReport](http://doddlereport.codeplex.com/) is a fantastic library built by [Matt Hidinger](https://twitter.com/matthidinger) which is a very simple, install-and-go package to turn your datasets into exportable objects like CSV, PDF or Excel. It hasnt been updated for years, but it's still solid as a rock.
 
 In using it through, there comes some limitations on exporting in MVC, as the built in routing style of {Action}.{Extension} causes issues within the app as the "." doesnt route properly.
