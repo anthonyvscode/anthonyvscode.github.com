@@ -13,13 +13,15 @@ To overcome this, I created an export that taps into the underlying types by usi
 
 Just pass in xlsx, pdf etc, and it will call the underlying writer instead of using the built in doddle routing which was {action}.{extension}
 
-Example Usage
+[b]Example Usage[/b]
 
 <pre class="prettyprint">
 http://localhost:80/Area/Controller/Action?extension={extension}
 </pre>
 
 In order to return this, just use the custom ReportResult (below) to return your results.
+
+[b]ReportResult ActionResult[/b]
 
 <pre class="prettyprint">
 
